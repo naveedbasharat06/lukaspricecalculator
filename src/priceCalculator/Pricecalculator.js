@@ -109,7 +109,7 @@ function Pricecalculator() {
                   </IconButton>
                   <List>
                     {pages.map((page) => (
-                      <ListItem button key={page}>
+                      <ListItem button key={page} className="listItems">
                         <a href={`#${page}`}>{page}</a>
                       </ListItem>
                     ))}

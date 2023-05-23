@@ -68,7 +68,7 @@ ul.MuiList-root.MuiList-padding.css-h4y409-MuiList-root {
   border-bottom: 2px solid hsla(240, 7%, 62%, 1);
   padding: 10px 0px;
 }
-.DrawerContainer .css-bshv44-MuiButtonBase-root-MuiListItem-root {
+.DrawerContainer .listItems {
   border-top: 2px solid hsla(240, 7%, 62%, 1);
   padding: 10px 0px;
 }
