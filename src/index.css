@@ -30,14 +30,16 @@ a:focus {
   border-bottom: 2px solid #e9b109;
   width: 30%;
 }
-.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+.CurrencySelecter div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input
-  img {
+.CurrencySelecter div img {
   margin-right: 8px !important;
+}
+.CurrencySelecterBox fieldset {
+  border: 0px !important;
 }
 /* Drawer */
 
@@ -48,8 +50,8 @@ a:focus {
   color: #ffffff;
   padding: 20px;
 }
-.css-6hp17o-MuiList-root-MuiMenu-list {
-  background-color: #142241;
+.MuiMenu-paper {
+  background-color: #142241 !important;
 }
 .DrawerContainer .MuiSelect-select,
 ul.MuiList-root.MuiList-padding.css-h4y409-MuiList-root {

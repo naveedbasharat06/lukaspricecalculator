@@ -49,6 +49,7 @@ function Pricecalculator() {
   `;
   const CurrencySelect = styled(Select)`
     font-family: Poppins !important;
+    border: 2px solid transparent;
     color: #ffffff;
     svg {
       color: #ffffff;
@@ -113,9 +114,16 @@ function Pricecalculator() {
                       </ListItem>
                     ))}
                   </List>
-                  <Box>
+                  <Box className="CurrencySelecterBox">
                     <FormControl sx={{ marginLeft: 2 }}>
                       <CurrencySelect
+                        style={{
+                          "&:focus": {
+                            boxShadow: "none",
+                            border: "none",
+                          },
+                        }}
+                        className="CurrencySelecter"
                         value={currency}
                         onChange={handleCurrencyChange}
                         color="secondary"
@@ -187,9 +195,11 @@ function Pricecalculator() {
                 flexGrow: 0,
                 display: { xs: "none", md: "flex" },
               }}
+              className="CurrencySelecterBox"
             >
               <FormControl sx={{ marginLeft: 2 }}>
                 <CurrencySelect
+                  className="CurrencySelecter"
                   value={currency}
                   onChange={handleCurrencyChange}
                   color="secondary"
