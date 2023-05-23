@@ -5,7 +5,25 @@ h1,
 h2,
 h3,
 p,
-button {
+button,
+a {
   margin: 0;
   font-family: Poppins !important;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+ul {
+  width: 90%;
+  margin: auto !important;
+}
+.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
+  background-color: #142241 !important;
+  justify-content: left;
+  display: flex;
+}
+ul p {
+  border-bottom: 2px solid #ffffff;
+  line-height: 40px !important;
 }
