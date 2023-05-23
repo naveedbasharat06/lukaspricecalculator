@@ -12,13 +12,17 @@ import {
   Drawer,
   List,
   ListItem,
-  ListItemText,
   IconButton,
   styled,
   Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ProblemasLogo from "../assets/problemas_Logo.png";
+import united from "../assets/united.png";
+import Aud from "../assets/Aud.png";
+import GBP from "../assets/GBP.png";
+import Can from "../assets/Can.png";
+import Euro from "../assets/Euro.png";
 import CloseIcon from "@mui/icons-material/Close";
 
 const currencyRates = {
@@ -39,6 +43,9 @@ function Pricecalculator() {
   const CurrencyItem = styled(MenuItem)`
     color: #ffffff;
     font-family: Poppins !important;
+    img {
+      margin-right: 10px;
+    }
   `;
   const CurrencySelect = styled(Select)`
     font-family: Poppins !important;
@@ -91,68 +98,81 @@ function Pricecalculator() {
                 onClose={handleDrawerToggle}
               >
                 <Box
-                  sx={{ width: 250 }}
+                  className="DrawerContainer"
                   role="presentation"
                   onClick={handleDrawerToggle}
                   onKeyDown={handleDrawerToggle}
                 >
-                  <IconButton
-                    onClick={handleDrawerToggle}
-                    sx={{ width: "100%", justifyContent: "right" }}
-                  >
-                    <CloseIcon />
+                  <IconButton onClick={handleDrawerToggle} color="inherit">
+                    <CloseIcon sx={{ fontSize: "34px" }} />
                   </IconButton>
                   <List>
                     {pages.map((page) => (
                       <ListItem button key={page}>
-                        <ListItemText primary={page} />
+                        <a href={`#${page}`}>{page}</a>
                       </ListItem>
                     ))}
                   </List>
-                </Box>
-                <Box>
-                  <FormControl sx={{ marginLeft: 2 }}>
-                    <CurrencySelect
-                      value={currency}
-                      onChange={handleCurrencyChange}
-                      color="secondary"
+                  <Box>
+                    <FormControl sx={{ marginLeft: 2 }}>
+                      <CurrencySelect
+                        value={currency}
+                        onChange={handleCurrencyChange}
+                        color="secondary"
+                      >
+                        <CurrencyItem value="USD">
+                          <img width={"20px"} src={united} alt="USD" />
+                          USD
+                        </CurrencyItem>
+                        <CurrencyItem value="EUR">
+                          <img width={"20px"} src={Euro} alt="USD" /> EUR
+                        </CurrencyItem>
+                        <CurrencyItem value="GBP">
+                          <img width={"20px"} src={GBP} alt="USD" /> GBP
+                        </CurrencyItem>
+                        <CurrencyItem value="JPY">
+                          <img width={"20px"} src={Aud} alt="USD" /> JPY
+                        </CurrencyItem>
+                        <CurrencyItem value="AUD">
+                          <img width={"20px"} src={Can} alt="USD" /> AUD
+                        </CurrencyItem>
+                      </CurrencySelect>
+                    </FormControl>
+                  </Box>
+                  <Box marginTop={"20px"}>
+                    <Button
+                      sx={{
+                        color: "#ffffff",
+                        textTransform: "capitalize",
+                        marginRight: "12px",
+                        background: "none",
+                        border: "1px solid #ffffff",
+                      }}
+                      variant="contained"
                     >
-                      <CurrencyItem value="USD">USD</CurrencyItem>
-                      <CurrencyItem value="EUR">EUR</CurrencyItem>
-                      <CurrencyItem value="GBP">GBP</CurrencyItem>
-                      <CurrencyItem value="JPY">JPY</CurrencyItem>
-                      <CurrencyItem value="AUD">AUD</CurrencyItem>
-                    </CurrencySelect>
-                  </FormControl>
-                </Box>
-                <Box marginTop={"20px"}>
-                  <Button
-                    sx={{
-                      color: "#ffffff",
-                      textTransform: "capitalize",
-                      marginRight: "12px",
-                    }}
-                    variant="text"
-                  >
-                    Sign Up
-                  </Button>
-                  <Button
-                    sx={{
-                      background: "#e9b109",
-                      color: "#000000",
-                      textTransform: "capitalize",
-                    }}
-                    variant="contained"
-                  >
-                    Log In
-                  </Button>
+                      Sign Up
+                    </Button>
+                    <Button
+                      sx={{
+                        background: "#e9b109",
+                        color: "#000000",
+                        textTransform: "capitalize",
+                      }}
+                      variant="contained"
+                    >
+                      Log In
+                    </Button>
+                  </Box>
                 </Box>
               </Drawer>
             </Box>
             <Box sx={{ flexGrow: 1 }}>
               <img width="130" src={ProblemasLogo} alt="logo" />
             </Box>
-            <Box sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}>
+            <Box
+              className="desktopMenu "
+              sx={{ flexGrow: 2, display: { xs: "none", md: "flex" } }}
+            >
               {pages.map((page) => (
                 <Button
                   key={page}
@@ -162,18 +182,34 @@ function Pricecalculator() {
                 </Button>
               ))}
             </Box>
-            <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                flexGrow: 0,
+                display: { xs: "none", md: "flex" },
+              }}
+            >
               <FormControl sx={{ marginLeft: 2 }}>
                 <CurrencySelect
                   value={currency}
                   onChange={handleCurrencyChange}
                   color="secondary"
                 >
-                  <CurrencyItem value="USD">USD</CurrencyItem>
-                  <CurrencyItem value="EUR">EUR</CurrencyItem>
-                  <CurrencyItem value="GBP">GBP</CurrencyItem>
-                  <CurrencyItem value="JPY">JPY</CurrencyItem>
-                  <CurrencyItem value="AUD">AUD</CurrencyItem>
+                  <CurrencyItem value="USD">
+                    <img width={"20px"} src={united} alt="USD" />
+                    USD
+                  </CurrencyItem>
+                  <CurrencyItem value="EUR">
+                    <img width={"20px"} src={Euro} alt="USD" /> EUR
+                  </CurrencyItem>
+                  <CurrencyItem value="GBP">
+                    <img width={"20px"} src={GBP} alt="USD" /> GBP
+                  </CurrencyItem>
+                  <CurrencyItem value="JPY">
+                    <img width={"20px"} src={Aud} alt="USD" /> JPY
+                  </CurrencyItem>
+                  <CurrencyItem value="AUD">
+                    <img width={"20px"} src={Can} alt="USD" /> AUD
+                  </CurrencyItem>
                 </CurrencySelect>
               </FormControl>
             </Box>

@@ -6,7 +6,8 @@ h2,
 h3,
 p,
 button,
-a {
+a,
+span {
   margin: 0;
   font-family: Poppins !important;
 }
@@ -14,16 +15,66 @@ a {
   color: #ffffff;
   text-decoration: none;
 }
-ul {
-  width: 90%;
-  margin: auto !important;
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #e9b109;
 }
-.css-1ka5eyc-MuiPaper-root-MuiMenu-paper-MuiPopover-paper {
-  background-color: #142241 !important;
-  justify-content: left;
+.desktopMenu button:hover a {
+  color: #e9b109;
+}
+.desktopMenu button:hover a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid #e9b109;
+  width: 30%;
+}
+.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-ul p {
-  border-bottom: 2px solid #ffffff;
-  line-height: 40px !important;
+.MuiSelect-select.MuiSelect-outlined.MuiInputBase-input.MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input
+  img {
+  margin-right: 8px !important;
+}
+/* Drawer */
+
+.DrawerContainer {
+  width: 250px;
+  background-color: #142241;
+  height: 100vh;
+  color: #ffffff;
+  padding: 20px;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color: #142241;
+}
+.DrawerContainer .MuiSelect-select,
+ul.MuiList-root.MuiList-padding.css-h4y409-MuiList-root {
+  padding: 0px !important;
+}
+.DrawerContainer .MuiFormControl-root {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0;
+  display: flex;
+  border-top: 2px solid hsla(240, 7%, 62%, 1);
+  border-bottom: 2px solid hsla(240, 7%, 62%, 1);
+  padding: 10px 0px;
+}
+.DrawerContainer .css-bshv44-MuiButtonBase-root-MuiListItem-root {
+  border-top: 2px solid hsla(240, 7%, 62%, 1);
+  padding: 10px 0px;
+}
+.DrawerContainer .css-1xaekgw {
+  width: 100%;
+  margin: 10px auto;
+}
+.DrawerContainer .css-zylse7-MuiButtonBase-root-MuiIconButton-root {
+  padding-left: 0;
+  margin-bottom: 10px;
 }
